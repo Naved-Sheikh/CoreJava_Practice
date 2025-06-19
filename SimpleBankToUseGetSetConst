@@ -1,0 +1,76 @@
+public class  Main{
+    public static void main(String[] args) {
+     bankAccount NavedAccount = new bankAccount();
+     NavedAccount.setBalance(2000);
+     NavedAccount.depositFunds(1000);
+     NavedAccount.withdrawlFunds(100);
+     NavedAccount.withdrawlFunds(3000);
+
+    }
+        }
+
+public class bankAccount {
+   private String costumerName;
+    private String accountNumber;
+    private String email;
+    private double balance;
+
+    public void depositFunds(double depositAmount){
+        balance+=depositAmount;
+        System.out.println("the deposit amount in $="+ depositAmount +" and the balance is $"+ balance);
+    }
+    public void withdrawlFunds(double withdrawlamount){
+        if(balance-withdrawlamount<0)
+        {
+            System.out.println("cannot withdraw, Insufficient balance");
+        }
+        else {
+            balance -=withdrawlamount;
+            System.out.println("Withdrawl amount in $ = "+withdrawlamount+ " and the new balance is $"+balance);
+        }
+
+    }
+    public String getCostumerName() {
+        return costumerName;
+    }
+
+    public void setCostumerName(String costumerName) {
+        this.costumerName = costumerName;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    private String phoneNumber;
+
+
+}
